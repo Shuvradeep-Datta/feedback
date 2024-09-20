@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>Document</title>
+</head>
+<body>
+  <!-- Feedback form Start -->
+    <main class="flex flex-col w-screen h-auto text-white bg-gray-800 lg:h-screen md:flex-row ">
+        <div class="flex items-center justify-center w-full bg-blue-700" >
+            <!-- FeedBack forms -->
+                <form action="" id="feedback_form" class="flex flex-col w-full gap-2 p-4 bg-gray-700 rounded-lg lg:w-2/3 ">
+                    <div class="flex items-center justify-center image_container">
+                            <img src="./images/feedback.png" class="w-20 lg:w-35" alt="feedback Icons">
+                    </div>
+                    <h1 id="form_heading" class="text-center ">FeedBack Application</h1>
+                    <!-- Name Fields -->
+                    <div class="form_input">
+                        <label for="name" class="mb-4 text-white">Name</label>
+                        <input type="text" id="name" class="w-full px-1 py-1 text-black border-none rounded-lg"  placeholder="Enter Here.." required />
+                      </div>
+                        <!-- Email Fields -->
+                      <div class="form_input">
+                        <label for="email" class="mb-4 text-white">Email</label>
+                        <input type="email" id="email" class="w-full px-1 py-1 text-black border-none rounded-lg" placeholder="Enter Here.." required />
+                      </div>
+                      <!-- Rating Field -->
+                      <div class="input_field">
+                        <label for="Rating" class="rating">Rating</label>
+                       <Select  id="rating" class="w-full px-1 py-1 text-black bg-white border-none rounded-lg" >
+                        <Option>1</Option>
+                        <Option>2</Option>
+                        <Option>3</Option>
+                        <Option>4</Option>
+                        <Option>5</Option>
+                       </Select>
+                      </div>
+                      <!-- End Of Rating Fields -->
+                      <!-- Starting of Text Area  -->
+           <div class="input_field">           
+    <label for="message" class="message">Your message</label>
+    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+            </div>
+                      <!-- End of Text Area -->
+                      <!-- Start of Button Area -->
+                      <div class="flex justify-center input_field">
+                        <button type="submit" class="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 border-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        <button type="button" id="clearButton" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 border-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Reset</button>
+                      </div>
+                      <!-- End of Button Area -->
+                </form>
+                    <!-- Feedback form End -->
+        </div>
+        <div class="w-full h-full overflow-auto">
+            <!-- FeedBacks -->
+            <div class="p-4 mt-2 feedback_container">
+              <h1 class="my-2 text-2xl font-bold text-center">Feedback List</h1>
+              <div id="feedback_item_container">
+
+              </div>
+            </div>
+        </div>
+    </main>
+
+   
+<script src="feedback.js"></script>
+    
+</body>
+</html>
